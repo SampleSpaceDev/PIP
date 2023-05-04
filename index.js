@@ -2,7 +2,7 @@ const { createCanvas, registerFont } = require("canvas");
 const express = require("express");
 const app = express();
 
-registerFont('minecraft.otf', { family: 'Minecraft' });
+registerFont('./minecraft.otf', { family: 'Minecraft' });
 
 const canvas = createCanvas(350, 80);
 const ctx = canvas.getContext('2d');
@@ -97,16 +97,17 @@ const prestigeColours = [
     { name: "3800", color: [colours.DARK_BLUE, colours.DARK_BLUE, colours.BLUE, colours.DARK_PURPLE, colours.DARK_PURPLE, colours.LIGHT_PURPLE, colours.DARK_BLUE], symbol: symbols.FOURTH },
     { name: "3900", color: [colours.RED, colours.RED, colours.GREEN, colours.GREEN, colours.DARK_GREEN, colours.BLUE, colours.BLUE], symbol: symbols.FOURTH },
     { name: "4000", color: [colours.DARK_PURPLE, colours.DARK_PURPLE, colours.RED, colours.RED, colours.GOLD, colours.GOLD, colours.YELLOW], symbol: symbols.FOURTH },
+
     { name: "4100", color: [colours.YELLOW, colours.YELLOW, colours.GOLD, colours.RED, colours.LIGHT_PURPLE, colours.LIGHT_PURPLE, colours.DARK_PURPLE], symbol: symbols.FOURTH },
     { name: "4200", color: [colours.DARK_BLUE, colours.BLUE, colours.DARK_AQUA, colours.AQUA, colours.WHITE, colours.GRAY, colours.GRAY], symbol: symbols.FOURTH },
     { name: "4300", color: [colours.BLACK, colours.DARK_PURPLE, colours.DARK_GRAY, colours.DARK_GRAY, colours.DARK_PURPLE, colours.DARK_PURPLE, colours.BLACK], symbol: symbols.FOURTH },
     { name: "4400", color: [colours.DARK_GREEN, colours.DARK_GREEN, colours.GREEN, colours.YELLOW, colours.GOLD, colours.DARK_PURPLE, colours.LIGHT_PURPLE], symbol: symbols.FOURTH },
     { name: "4500", color: [colours.WHITE, colours.WHITE, colours.AQUA, colours.AQUA, colours.DARK_AQUA, colours.DARK_AQUA, colours.DARK_AQUA], symbol: symbols.FOURTH },
-    { name: "4600", color: [], symbol: symbols.FOURTH },
-    { name: "4700", color: [], symbol: symbols.FOURTH },
-    { name: "4800", color: [], symbol: symbols.FOURTH },
-    { name: "4900", color: [], symbol: symbols.FOURTH },
-    { name: "5000", color: [], symbol: symbols.FOURTH },
+    { name: "4600", color: [colours.DARK_AQUA, colours.AQUA, colours.YELLOW, colours.YELLOW, colours.GOLD, colours.LIGHT_PURPLE, colours.DARK_PURPLE], symbol: symbols.FOURTH },
+    { name: "4700", color: [colours.WHITE, colours.DARK_RED, colours.RED, colours.RED, colours.BLUE, colours.DARK_BLUE, colours.BLUE], symbol: symbols.FOURTH },
+    { name: "4800", color: [colours.DARK_PURPLE, colours.DARK_PURPLE, colours.RED, colours.GOLD, colours.YELLOW, colours.AQUA, colours.DARK_AQUA], symbol: symbols.FOURTH },
+    { name: "4900", color: [colours.DARK_GREEN, colours.GREEN, colours.WHITE, colours.WHITE, colours.GREEN, colours.GREEN, colours.DARK_GREEN], symbol: symbols.FOURTH },
+    { name: "5000", color: [colours.DARK_RED, colours.DARK_RED, colours.DARK_PURPLE, colours.BLUE, colours.BLUE, colours.DARK_BLUE, colours.BLACK], symbol: symbols.FOURTH },
 ];
 
 function generatePrestige(level) {
@@ -138,6 +139,8 @@ function generatePrestige(level) {
         ctx.fillStyle = prestige.color;
         ctx.fillText(formatted, 20, canvas.height - 20);
     }
+
+    console.log(canvas.toDataURL());
 
     return canvas.toBuffer();
 }
