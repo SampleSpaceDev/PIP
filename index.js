@@ -140,13 +140,11 @@ function generatePrestige(level) {
         ctx.fillText(formatted, 20, canvas.height - 20);
     }
 
-    console.log(canvas.toDataURL());
-
     return canvas.toBuffer();
 }
 
 
-app.get("/prestigeImage/:level", (req, res) => {
+app.get("/:level", (req, res) => {
     let level = req.params.level;
 
     let buffer = generatePrestige(level);
