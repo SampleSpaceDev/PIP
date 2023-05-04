@@ -48,7 +48,8 @@ const shadows = new Map([
 const symbols = Object.freeze({
     FIRST: "✫",
     SECOND: "✪",
-    THIRD: "⚝"
+    THIRD: "⚝",
+    FOURTH: "✥"
 });
 
 const prestigeColours = [
@@ -85,6 +86,27 @@ const prestigeColours = [
     { name: "Earth", color: [colours.GREEN, colours.GREEN, colours.DARK_GREEN, colours.DARK_GREEN, colours.GOLD, colours.GOLD, colours.YELLOW], symbol: symbols.THIRD },
     { name: "Water", color: [colours.AQUA, colours.AQUA, colours.DARK_AQUA, colours.DARK_AQUA, colours.BLUE, colours.BLUE, colours.DARK_BLUE], symbol: symbols.THIRD },
     { name: "Fire", color: [colours.YELLOW, colours.YELLOW, colours.GOLD, colours.GOLD, colours.RED, colours.RED, colours.DARK_RED], symbol: symbols.THIRD },
+
+    { name: "3100", color: [colours.DARK_BLUE, colours.DARK_BLUE, colours.DARK_AQUA, colours.DARK_AQUA, colours.GOLD, colours.GOLD, colours.YELLOW], symbol: symbols.FOURTH },
+    { name: "3200", color: [colours.RED, colours.DARK_RED, colours.GRAY, colours.GRAY, colours.DARK_RED, colours.RED, colours.RED], symbol: symbols.FOURTH },
+    { name: "3300", color: [colours.BLUE, colours.BLUE, colours.BLUE, colours.LIGHT_PURPLE, colours.RED, colours.RED, colours.DARK_RED], symbol: symbols.FOURTH },
+    { name: "3400", color: [colours.DARK_GREEN, colours.GREEN, colours.LIGHT_PURPLE, colours.LIGHT_PURPLE, colours.DARK_PURPLE, colours.DARK_PURPLE, colours.DARK_GREEN], symbol: symbols.FOURTH },
+    { name: "3500", color: [colours.RED, colours.RED, colours.DARK_RED, colours.DARK_RED, colours.DARK_GREEN, colours.GREEN, colours.GREEN], symbol: symbols.FOURTH },
+    { name: "3600", color: [colours.GREEN, colours.GREEN, colours.GREEN, colours.AQUA, colours.BLUE, colours.BLUE, colours.DARK_BLUE], symbol: symbols.FOURTH },
+    { name: "3700", color: [colours.DARK_RED, colours.DARK_RED, colours.RED, colours.RED, colours.AQUA, colours.DARK_AQUA, colours.DARK_AQUA], symbol: symbols.FOURTH },
+    { name: "3800", color: [colours.DARK_BLUE, colours.DARK_BLUE, colours.BLUE, colours.DARK_PURPLE, colours.DARK_PURPLE, colours.LIGHT_PURPLE, colours.DARK_BLUE], symbol: symbols.FOURTH },
+    { name: "3900", color: [colours.RED, colours.RED, colours.GREEN, colours.GREEN, colours.DARK_GREEN, colours.BLUE, colours.BLUE], symbol: symbols.FOURTH },
+    { name: "4000", color: [colours.DARK_PURPLE, colours.DARK_PURPLE, colours.RED, colours.RED, colours.GOLD, colours.GOLD, colours.YELLOW], symbol: symbols.FOURTH },
+    { name: "4100", color: [colours.YELLOW, colours.YELLOW, colours.GOLD, colours.RED, colours.LIGHT_PURPLE, colours.LIGHT_PURPLE, colours.DARK_PURPLE], symbol: symbols.FOURTH },
+    { name: "4200", color: [colours.DARK_BLUE, colours.BLUE, colours.DARK_AQUA, colours.AQUA, colours.WHITE, colours.GRAY, colours.GRAY], symbol: symbols.FOURTH },
+    { name: "4300", color: [colours.BLACK, colours.DARK_PURPLE, colours.DARK_GRAY, colours.DARK_GRAY, colours.DARK_PURPLE, colours.DARK_PURPLE, colours.BLACK], symbol: symbols.FOURTH },
+    { name: "4400", color: [colours.DARK_GREEN, colours.DARK_GREEN, colours.GREEN, colours.YELLOW, colours.GOLD, colours.DARK_PURPLE, colours.LIGHT_PURPLE], symbol: symbols.FOURTH },
+    { name: "4500", color: [colours.WHITE, colours.WHITE, colours.AQUA, colours.AQUA, colours.DARK_AQUA, colours.DARK_AQUA, colours.DARK_AQUA], symbol: symbols.FOURTH },
+    { name: "4600", color: [], symbol: symbols.FOURTH },
+    { name: "4700", color: [], symbol: symbols.FOURTH },
+    { name: "4800", color: [], symbol: symbols.FOURTH },
+    { name: "4900", color: [], symbol: symbols.FOURTH },
+    { name: "5000", color: [], symbol: symbols.FOURTH },
 ];
 
 function generatePrestige(level) {
